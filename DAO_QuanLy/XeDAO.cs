@@ -27,7 +27,7 @@ namespace DAO_QuanLy
 
         public DataTable CacXeDaTiepNhan()
         {
-            string query = "SELECT BienSo, TenHieuXe, TenKH, DienThoai, DiaChi FROM XE, HIEUXE as HX, KHACHHANG as KH WHERE XE.MaKH = KH.MaKH and XE.MaHX = HX.MaHX and XE.TrangThai = 1";
+            string query = "SELECT BienSo as 'Biển số', TenHieuXe as 'Tên hiệu xe', TenKH as 'Tên khách hàng', DienThoai as 'Điện thoại', DiaChi as 'Địa chỉ' FROM XE, HIEUXE as HX, KHACHHANG as KH WHERE XE.MaKH = KH.MaKH and XE.MaHX = HX.MaHX and XE.TrangThai = 1";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -39,7 +39,7 @@ namespace DAO_QuanLy
 
         public DataTable LamMoiDanhSachXe()
         {
-            string query = "SELECT TenHieuXe, BienSo, TenKH, DienThoai, DiaChi FROM XE, HIEUXE as HX, KHACHHANG as KH WHERE Xe.MaKH = KH.MaKH and Xe.MaHX = HX.MaHX and XE.TrangThai = 1";
+            string query = "SELECT  BienSo as 'Biển số' , TenHieuXe as 'Tên hiệu xe', TenKH as 'Tên khách hàng', DienThoai as 'Điện thoại', DiaChi as 'Địa chỉ'  FROM XE, HIEUXE as HX, KHACHHANG as KH WHERE Xe.MaKH = KH.MaKH and Xe.MaHX = HX.MaHX and XE.TrangThai = 1";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

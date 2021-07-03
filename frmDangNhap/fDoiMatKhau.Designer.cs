@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fDoiMatKhau));
             this.pnlThayDoiMatKhau = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuuThayDoi = new System.Windows.Forms.Button();
@@ -55,7 +56,7 @@
             // 
             // pnlThayDoiMatKhau
             // 
-            this.pnlThayDoiMatKhau.BackColor = System.Drawing.Color.Transparent;
+            this.pnlThayDoiMatKhau.BackColor = System.Drawing.Color.LightSkyBlue;
             this.pnlThayDoiMatKhau.Controls.Add(this.btnThoat);
             this.pnlThayDoiMatKhau.Controls.Add(this.btnLuuThayDoi);
             this.pnlThayDoiMatKhau.Controls.Add(this.panel4);
@@ -86,7 +87,7 @@
             // btnLuuThayDoi
             // 
             this.btnLuuThayDoi.BackColor = System.Drawing.Color.Transparent;
-            this.btnLuuThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLuuThayDoi.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnLuuThayDoi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuThayDoi.Location = new System.Drawing.Point(112, 247);
             this.btnLuuThayDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -231,6 +232,7 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel5.Controls.Add(this.txtBoxTaiKhoan);
             this.panel5.Controls.Add(this.lblTaiKhoan);
             this.panel5.Location = new System.Drawing.Point(0, 2);
@@ -268,6 +270,7 @@
             this.CancelButton = this.btnThoat;
             this.ClientSize = new System.Drawing.Size(666, 300);
             this.Controls.Add(this.pnlThayDoiMatKhau);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fDoiMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";

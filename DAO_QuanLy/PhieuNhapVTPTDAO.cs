@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace DAO_QuanLy
 {
     public class PhieuNhapVTPTDAO
@@ -19,6 +20,7 @@ namespace DAO_QuanLy
             string query = "NhapVTPT @MaPhuTung , @SoLuong , @ThoiDiem";
             return DataProvider.Instance.ExecuteNonQuery(query, new object[] { ten, soluong, now });
         }
+
         public int NhapMoiVTPT(string ten, int soluong, int gia, DateTime now)
         {
             string query = "NhapMoiVTPT @TenPhuTung , @SoLuong , @DonGia , @ThoiDiem";

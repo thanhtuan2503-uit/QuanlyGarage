@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+
 namespace DAO_QuanLy
 {
     public class PhieuThuTienDAO
@@ -41,7 +42,5 @@ namespace DAO_QuanLy
             string query = "SELECT TenKH, DienThoai, DiaChi FROM KHACHHANG as KH, XE WHERE KH.MaKH = XE.MaKH and XE.BienSo = '" + BienSo + "'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-
-
     }
 }

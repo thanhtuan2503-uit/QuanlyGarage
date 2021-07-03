@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fLogin));
             this.btnLogin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(181, 146);
+            this.btnLogin.Location = new System.Drawing.Point(203, 168);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(98, 36);
             this.btnLogin.TabIndex = 0;
@@ -68,14 +69,14 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 14);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.Size = new System.Drawing.Size(99, 25);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Mật khẩu";
+            this.label2.Text = "Mật khẩu:";
             // 
             // btnExit
             // 
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnExit.Location = new System.Drawing.Point(335, 147);
+            this.btnExit.Location = new System.Drawing.Point(357, 169);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(99, 35);
             this.btnExit.TabIndex = 4;
@@ -86,7 +87,7 @@
             // tbUserName
             // 
             this.tbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUserName.Location = new System.Drawing.Point(178, 10);
+            this.tbUserName.Location = new System.Drawing.Point(165, 10);
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(253, 30);
             this.tbUserName.TabIndex = 5;
@@ -95,7 +96,7 @@
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPassword.Location = new System.Drawing.Point(178, 9);
+            this.tbPassword.Location = new System.Drawing.Point(165, 9);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(253, 30);
             this.tbPassword.TabIndex = 6;
@@ -104,20 +105,21 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnLogin);
-            this.panel1.Location = new System.Drawing.Point(14, 27);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 199);
+            this.panel1.Size = new System.Drawing.Size(547, 252);
             this.panel1.TabIndex = 7;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.tbPassword);
-            this.panel3.Location = new System.Drawing.Point(3, 76);
+            this.panel3.Location = new System.Drawing.Point(38, 90);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(463, 54);
             this.panel3.TabIndex = 1;
@@ -126,7 +128,7 @@
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.tbUserName);
-            this.panel2.Location = new System.Drawing.Point(3, 13);
+            this.panel2.Location = new System.Drawing.Point(38, 27);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(463, 57);
             this.panel2.TabIndex = 0;
@@ -136,14 +138,16 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(484, 228);
+            this.ClientSize = new System.Drawing.Size(543, 233);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
+            this.Load += new System.EventHandler(this.fLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

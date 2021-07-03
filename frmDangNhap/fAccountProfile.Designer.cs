@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fAccountProfile));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDoiMatKhau = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel1.Controls.Add(this.btnThoat);
             this.panel1.Controls.Add(this.btnDoiMatKhau);
             this.panel1.Controls.Add(this.txtBoxQuyenHan);
@@ -51,16 +52,17 @@
             this.panel1.Controls.Add(this.lblQuyenHan);
             this.panel1.Controls.Add(this.txtBoxHoTen);
             this.panel1.Controls.Add(this.lblHoten);
-            this.panel1.Location = new System.Drawing.Point(12, 11);
+            this.panel1.Location = new System.Drawing.Point(1, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(667, 194);
+            this.panel1.Size = new System.Drawing.Size(678, 203);
             this.panel1.TabIndex = 1;
             // 
             // btnThoat
             // 
-            this.btnThoat.BackColor = System.Drawing.Color.Transparent;
+            this.btnThoat.BackColor = System.Drawing.SystemColors.Control;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Location = new System.Drawing.Point(444, 130);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
@@ -73,7 +75,8 @@
             // btnDoiMatKhau
             // 
             this.btnDoiMatKhau.BackColor = System.Drawing.Color.Transparent;
-            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDoiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnDoiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoiMatKhau.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDoiMatKhau.Location = new System.Drawing.Point(444, 69);
             this.btnDoiMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -146,18 +149,20 @@
             // 
             // fAccountProfile
             // 
+            this.AcceptButton = this.btnDoiMatKhau;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(686, 214);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fAccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông Tin Tài Khoản";
+            this.Load += new System.EventHandler(this.FrmThongTinTaiKhoan_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.Load += new System.EventHandler(this.FrmThongTinTaiKhoan_Load);
-            
 
         }
 
