@@ -368,7 +368,7 @@ namespace frmDangNhap
         private void buttonPhieuThuTienMoiPTT_Click(object sender, EventArgs e)
         {
             textBoxDienThoaiPTT.Clear();
-            textBoxDiaChiPTT.Clear();
+            textBoxGmail.Clear();
             textBoxHoTenChuXePTT.Clear();
             textBoxSoTienThuPTT.Clear();
             DateTime now = DateTime.Now;
@@ -399,9 +399,8 @@ namespace frmDangNhap
             string[] info = PhieuThuTienBUS.Instance.LayThongTinKH(comboBienSoXe2.Text);        //du lieu tra ve: { ten, dien thoai, dia chi}
             textBoxHoTenChuXePTT.Text = info[0];
             textBoxDienThoaiPTT.Text = info[1];
-            textBoxDiaChiPTT.Text = info[2];
+            textBoxGmail.Text = info[2];
         }
-        #endregion
 
         private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -411,12 +410,12 @@ namespace frmDangNhap
         private void buttonTaoMoiVTPT_Click(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
-            if (textBoxSoLuongVTPT.Text == "")
+            if (textBoxSLVTPT.Text == "")
                 MessageBox.Show("Vui lòng nhập số lượng vật tư trước khi thêm mới vật tư vào kho !");
             else
             {
                 int test = 0;
-                test = PhieuNhapVTPTBUS.Instance.NhapMoiVTPT(textBoxTenVTPTMoi.Text, textBoxSoLuongVTPT.Text, textBoxGiaVTPT.Text, now);
+                test = PhieuNhapVTPTBUS.Instance.NhapMoiVTPT(textBoxTenVTPTMoi.Text, textBoxSLVTPT.Text, textBoxGiaVTPT.Text, now);
                 if (test > 0)
                 {
                     MessageBox.Show("Nhập mới vật tư phụ tùng thành công");
@@ -430,22 +429,22 @@ namespace frmDangNhap
             printDialogPhieuNhapVTPT.ShowDialog();
         }
 
-        //private void TextBoxSoLuongVTPT_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-        //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-        //    {
-        //        e.Handled = true;
-        //    }
-        //}
+        private void TextBoxSoLuongVTPT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         private void buttonLapPhieuNhapVTPT_Click(object sender, EventArgs e)
         {
-            if (textBoxSoLuongVTPT.Text == "")
+            if (textBoxSLVTPT.Text == "")
                 MessageBox.Show("Vui lòng nhập số lượng vật tư trước khi thêm mới phiếu nhập !");
             else
             {
                 int test = 0;
-                test = PhieuNhapVTPTBUS.Instance.NhapVTPT(comboBoxTenVTPT.SelectedValue.ToString(), textBoxSoLuongVTPT.Text, now);
+                test = PhieuNhapVTPTBUS.Instance.NhapVTPT(comboBoxTenVTPT.SelectedValue.ToString(), textBoxSLVTPT.Text, now);
                 if (test > 0)
                     MessageBox.Show("Nhập vật tư phụ tùng thành công!");
             }
@@ -459,12 +458,7 @@ namespace frmDangNhap
             textBoxGiaVTPT_TextChanged = true;
         }
 
-        private void comboBoxTenVTPT_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            textBoxTenVTPTMoi.Enabled = false;
-            textBoxGiaVTPT.Enabled = false;
-            buttonTaoMoiVTPT.Visible = false;
-        }
+        
 
         private void TextBoxTenVTPTMoi_TextChanged(object sender, EventArgs e)
         {
@@ -476,7 +470,7 @@ namespace frmDangNhap
         private void buttonPhieuNhapVTPTMoi_Click(object sender, EventArgs e)
         {
             textBoxTenVTPTMoi.Clear();
-            textBoxSoLuongVTPT.Clear();
+            textBoxSLVTPT.Clear();
             textBoxGiaVTPT.Clear();
             textBoxTenVTPTMoi.Enabled = true;
             textBoxGiaVTPT.Enabled = true;
@@ -619,6 +613,20 @@ namespace frmDangNhap
             dataGridViewQuyDinhHienHanh.DataSource = BUS_QuanLy.QuyDinhBUS.Instance.LayTatCaQuyDinh();
             dataGridViewQuyDinhHienHanh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewQuyDinhHienHanh.AutoResizeColumns();
+        }
+
+        #endregion
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTenVTPT_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            textBoxTenVTPTMoi.Enabled = false;
+            textBoxGiaVTPT.Enabled = false;
+            buttonTaoMoiVTPT.Visible = false;
         }
     }
 }

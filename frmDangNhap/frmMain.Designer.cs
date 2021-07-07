@@ -161,7 +161,7 @@
             this.textBoxNgayThuTien = new System.Windows.Forms.TextBox();
             this.labelNgayThuTienPTT = new System.Windows.Forms.Label();
             this.panelEmailPTT = new System.Windows.Forms.Panel();
-            this.textBoxDiaChiPTT = new System.Windows.Forms.TextBox();
+            this.textBoxGmail = new System.Windows.Forms.TextBox();
             this.labelEmailPTT = new System.Windows.Forms.Label();
             this.panelDienThoaiPTT = new System.Windows.Forms.Panel();
             this.textBoxDienThoaiPTT = new System.Windows.Forms.TextBox();
@@ -182,8 +182,8 @@
             this.labelTenVTPTMoi = new System.Windows.Forms.Label();
             this.textBoxTenVTPTMoi = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.textBoxSLVTPT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.labelSoLuongVTPT = new System.Windows.Forms.Label();
@@ -1775,7 +1775,7 @@
             // 
             // panelEmailPTT
             // 
-            this.panelEmailPTT.Controls.Add(this.textBoxDiaChiPTT);
+            this.panelEmailPTT.Controls.Add(this.textBoxGmail);
             this.panelEmailPTT.Controls.Add(this.labelEmailPTT);
             this.panelEmailPTT.Location = new System.Drawing.Point(645, 97);
             this.panelEmailPTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1783,17 +1783,14 @@
             this.panelEmailPTT.Size = new System.Drawing.Size(635, 56);
             this.panelEmailPTT.TabIndex = 5;
             // 
-            // textBoxDiaChiPTT
+            // textBoxGmail
             // 
-            this.textBoxDiaChiPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDiaChiPTT.Location = new System.Drawing.Point(130, 13);
-            this.textBoxDiaChiPTT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxDiaChiPTT.MaxLength = 100;
-            this.textBoxDiaChiPTT.Name = "textBoxDiaChiPTT";
-            this.textBoxDiaChiPTT.ReadOnly = true;
-            this.textBoxDiaChiPTT.Size = new System.Drawing.Size(437, 30);
-            this.textBoxDiaChiPTT.TabIndex = 0;
-            this.textBoxDiaChiPTT.TabStop = false;
+            this.textBoxGmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGmail.Location = new System.Drawing.Point(130, 13);
+            this.textBoxGmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxGmail.Name = "textBoxGmail";
+            this.textBoxGmail.Size = new System.Drawing.Size(437, 30);
+            this.textBoxGmail.TabIndex = 3;
             // 
             // labelEmailPTT
             // 
@@ -1801,9 +1798,9 @@
             this.labelEmailPTT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelEmailPTT.Location = new System.Drawing.Point(3, 16);
             this.labelEmailPTT.Name = "labelEmailPTT";
-            this.labelEmailPTT.Size = new System.Drawing.Size(83, 22);
+            this.labelEmailPTT.Size = new System.Drawing.Size(68, 22);
             this.labelEmailPTT.TabIndex = 0;
-            this.labelEmailPTT.Text = "Địa Chỉ :";
+            this.labelEmailPTT.Text = "Email :";
             // 
             // panelDienThoaiPTT
             // 
@@ -2003,13 +2000,22 @@
             // 
             // panel15
             // 
+            this.panel15.Controls.Add(this.textBoxSLVTPT);
             this.panel15.Controls.Add(this.label1);
-            this.panel15.Controls.Add(this.textBox1);
             this.panel15.Location = new System.Drawing.Point(7, 158);
             this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(659, 98);
             this.panel15.TabIndex = 19;
+            // 
+            // textBoxSLVTPT
+            // 
+            this.textBoxSLVTPT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSLVTPT.Location = new System.Drawing.Point(223, 28);
+            this.textBoxSLVTPT.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxSLVTPT.Name = "textBoxSLVTPT";
+            this.textBoxSLVTPT.Size = new System.Drawing.Size(419, 30);
+            this.textBoxSLVTPT.TabIndex = 2;
             // 
             // label1
             // 
@@ -2021,15 +2027,6 @@
             this.label1.Size = new System.Drawing.Size(98, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Số Lượng :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(223, 32);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(419, 30);
-            this.textBox1.TabIndex = 2;
             // 
             // panel29
             // 
@@ -2074,6 +2071,7 @@
             // 
             // comboBoxTenVTPT
             // 
+            this.comboBoxTenVTPT.DataSource = this.pHUTUNGBindingSource;
             this.comboBoxTenVTPT.DisplayMember = "TenVatTuPhuTung";
             this.comboBoxTenVTPT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTenVTPT.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -2083,6 +2081,7 @@
             this.comboBoxTenVTPT.Size = new System.Drawing.Size(419, 30);
             this.comboBoxTenVTPT.TabIndex = 1;
             this.comboBoxTenVTPT.ValueMember = "MaPhuTung";
+            this.comboBoxTenVTPT.SelectionChangeCommitted += new System.EventHandler(this.comboBoxTenVTPT_SelectionChangeCommitted);
             // 
             // labelTenVTPT
             // 
@@ -2391,11 +2390,11 @@
             this.dataGridViewTraCuu.AllowUserToResizeColumns = false;
             this.dataGridViewTraCuu.AllowUserToResizeRows = false;
             this.dataGridViewTraCuu.ColumnHeadersHeight = 29;
-            this.dataGridViewTraCuu.Location = new System.Drawing.Point(18, 3);
+            this.dataGridViewTraCuu.Location = new System.Drawing.Point(80, 3);
             this.dataGridViewTraCuu.Name = "dataGridViewTraCuu";
             this.dataGridViewTraCuu.RowHeadersWidth = 51;
             this.dataGridViewTraCuu.RowTemplate.Height = 24;
-            this.dataGridViewTraCuu.Size = new System.Drawing.Size(819, 436);
+            this.dataGridViewTraCuu.Size = new System.Drawing.Size(757, 436);
             this.dataGridViewTraCuu.TabIndex = 0;
             // 
             // tCtrlChinh
@@ -2656,7 +2655,6 @@
         private System.Windows.Forms.TextBox textBoxNgayThuTien;
         private System.Windows.Forms.Label labelNgayThuTienPTT;
         private System.Windows.Forms.Panel panelEmailPTT;
-        private System.Windows.Forms.TextBox textBoxDiaChiPTT;
         private System.Windows.Forms.Label labelEmailPTT;
         private System.Windows.Forms.Panel panelDienThoaiPTT;
         private System.Windows.Forms.TextBox textBoxDienThoaiPTT;
@@ -2772,13 +2770,14 @@
         private System.Windows.Forms.TextBox textBoxTenVTPTMoi;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Label labelSoLuongVTPT;
         private System.Windows.Forms.TextBox textBoxSoLuongVTPT;
         private System.Windows.Forms.ComboBox comboBoxTenVTPT;
         private System.Windows.Forms.Label labelTenVTPT;
+        private System.Windows.Forms.TextBox textBoxGmail;
+        private System.Windows.Forms.TextBox textBoxSLVTPT;
     }
 }
 
