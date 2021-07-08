@@ -78,6 +78,7 @@ namespace DAO_QuanLy
                     }
                 }
 
+                
                 data = command.ExecuteNonQuery();
 
                 connection.Close();

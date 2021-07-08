@@ -38,7 +38,7 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewQDHH = new System.Windows.Forms.DataGridView();
             this.pnCapNhatQuyDinh = new System.Windows.Forms.Panel();
             this.panelQuyDinhHienHanh = new System.Windows.Forms.Panel();
             this.buttonLamMoiQuyDinh = new System.Windows.Forms.Button();
@@ -150,6 +150,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblPhieuSuaChua = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.lblPhieuThuTien = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.buttonPhieuThuTienMoiPTT = new System.Windows.Forms.Button();
             this.buttonInPhieuThuTienPTT = new System.Windows.Forms.Button();
@@ -173,7 +174,6 @@
             this.textBoxHoTenChuXePTT = new System.Windows.Forms.TextBox();
             this.labelHoTenChuXePTT = new System.Windows.Forms.Label();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.lblPhieuThuTien = new System.Windows.Forms.Label();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel32 = new System.Windows.Forms.Panel();
             this.labelGiaVTPT = new System.Windows.Forms.Label();
@@ -212,6 +212,9 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.textBoxTraCuuChinh = new System.Windows.Forms.TextBox();
             this.lblTraCuuChinh = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.radioButtonTimTuongDoi = new System.Windows.Forms.RadioButton();
+            this.radioButtonTimChinhXac = new System.Windows.Forms.RadioButton();
             this.paneldtgvTCuu = new System.Windows.Forms.Panel();
             this.dataGridViewTraCuu = new System.Windows.Forms.DataGridView();
             this.tCtrlChinh = new System.Windows.Forms.TabControl();
@@ -224,13 +227,10 @@
             this.printDialogPhieuNhapVTPT = new System.Windows.Forms.PrintDialog();
             this.printDialogInBCDT = new System.Windows.Forms.PrintDialog();
             this.printDialogInBCT = new System.Windows.Forms.PrintDialog();
-            this.radioButtonTimChinhXac = new System.Windows.Forms.RadioButton();
-            this.radioButtonTimTuongDoi = new System.Windows.Forms.RadioButton();
-            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQDHH)).BeginInit();
             this.pnCapNhatQuyDinh.SuspendLayout();
             this.panelQuyDinhHienHanh.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQuyDinhHienHanh)).BeginInit();
@@ -297,10 +297,10 @@
             this.panel24.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.panel17.SuspendLayout();
+            this.flowLayoutPanel4.SuspendLayout();
             this.paneldtgvTCuu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuu)).BeginInit();
             this.tCtrlChinh.SuspendLayout();
-            this.flowLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -327,14 +327,14 @@
             // thôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
             this.thôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(220, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -353,7 +353,7 @@
             // 
             this.panel10.Controls.Add(this.button3);
             this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.dataGridView2);
+            this.panel10.Controls.Add(this.dataGridViewQDHH);
             this.panel10.Location = new System.Drawing.Point(666, 15);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(652, 469);
@@ -383,15 +383,16 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "QUY ĐỊNH HIỆN HÀNH";
             // 
-            // dataGridView2
+            // dataGridViewQDHH
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(5, 114);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(644, 352);
-            this.dataGridView2.TabIndex = 0;
+            this.dataGridViewQDHH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewQDHH.Location = new System.Drawing.Point(5, 114);
+            this.dataGridViewQDHH.Name = "dataGridViewQDHH";
+            this.dataGridViewQDHH.RowHeadersWidth = 51;
+            this.dataGridViewQDHH.RowTemplate.Height = 24;
+            this.dataGridViewQDHH.Size = new System.Drawing.Size(644, 352);
+            this.dataGridViewQDHH.TabIndex = 0;
+            this.dataGridViewQDHH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQDHH_CellContentClick);
             // 
             // pnCapNhatQuyDinh
             // 
@@ -1006,7 +1007,7 @@
             this.pnDanhSachTiepNhan.Location = new System.Drawing.Point(642, 2);
             this.pnDanhSachTiepNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnDanhSachTiepNhan.Name = "pnDanhSachTiepNhan";
-            this.pnDanhSachTiepNhan.Size = new System.Drawing.Size(643, 484);
+            this.pnDanhSachTiepNhan.Size = new System.Drawing.Size(643, 482);
             this.pnDanhSachTiepNhan.TabIndex = 2;
             this.pnDanhSachTiepNhan.TabStop = true;
             // 
@@ -1721,6 +1722,17 @@
             this.tabPage6.Text = "Lập phiếu thu tiền ";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // lblPhieuThuTien
+            // 
+            this.lblPhieuThuTien.AutoSize = true;
+            this.lblPhieuThuTien.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhieuThuTien.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblPhieuThuTien.Location = new System.Drawing.Point(576, 26);
+            this.lblPhieuThuTien.Name = "lblPhieuThuTien";
+            this.lblPhieuThuTien.Size = new System.Drawing.Size(185, 32);
+            this.lblPhieuThuTien.TabIndex = 0;
+            this.lblPhieuThuTien.Text = "Phiếu thu tiền";
+            // 
             // panel23
             // 
             this.panel23.Controls.Add(this.buttonPhieuThuTienMoiPTT);
@@ -1972,17 +1984,6 @@
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(1291, 38);
             this.panel22.TabIndex = 1;
-            // 
-            // lblPhieuThuTien
-            // 
-            this.lblPhieuThuTien.AutoSize = true;
-            this.lblPhieuThuTien.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhieuThuTien.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblPhieuThuTien.Location = new System.Drawing.Point(576, 26);
-            this.lblPhieuThuTien.Name = "lblPhieuThuTien";
-            this.lblPhieuThuTien.Size = new System.Drawing.Size(185, 32);
-            this.lblPhieuThuTien.TabIndex = 0;
-            this.lblPhieuThuTien.Text = "Phiếu thu tiền";
             // 
             // tabPage7
             // 
@@ -2416,6 +2417,47 @@
             this.lblTraCuuChinh.TabIndex = 0;
             this.lblTraCuuChinh.Text = "Từ khóa:";
             // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Controls.Add(this.radioButtonTimTuongDoi);
+            this.flowLayoutPanel4.Controls.Add(this.radioButtonTimChinhXac);
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 50);
+            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(191, 58);
+            this.flowLayoutPanel4.TabIndex = 4;
+            // 
+            // radioButtonTimTuongDoi
+            // 
+            this.radioButtonTimTuongDoi.AutoSize = true;
+            this.radioButtonTimTuongDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.radioButtonTimTuongDoi.Checked = true;
+            this.radioButtonTimTuongDoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTimTuongDoi.Location = new System.Drawing.Point(3, 2);
+            this.radioButtonTimTuongDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButtonTimTuongDoi.Name = "radioButtonTimTuongDoi";
+            this.radioButtonTimTuongDoi.Size = new System.Drawing.Size(127, 23);
+            this.radioButtonTimTuongDoi.TabIndex = 2;
+            this.radioButtonTimTuongDoi.TabStop = true;
+            this.radioButtonTimTuongDoi.Text = "Tìm tương đối";
+            this.radioButtonTimTuongDoi.UseVisualStyleBackColor = false;
+            this.radioButtonTimTuongDoi.CheckedChanged += new System.EventHandler(this.radioButtonTimTuongDoi_CheckedChanged);
+            // 
+            // radioButtonTimChinhXac
+            // 
+            this.radioButtonTimChinhXac.AutoSize = true;
+            this.radioButtonTimChinhXac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.radioButtonTimChinhXac.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonTimChinhXac.Location = new System.Drawing.Point(3, 29);
+            this.radioButtonTimChinhXac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButtonTimChinhXac.Name = "radioButtonTimChinhXac";
+            this.radioButtonTimChinhXac.Size = new System.Drawing.Size(125, 23);
+            this.radioButtonTimChinhXac.TabIndex = 3;
+            this.radioButtonTimChinhXac.TabStop = true;
+            this.radioButtonTimChinhXac.Text = "Tìm chính xác";
+            this.radioButtonTimChinhXac.UseVisualStyleBackColor = false;
+            this.radioButtonTimChinhXac.CheckedChanged += new System.EventHandler(this.radioButtonTimChinhXac_CheckedChanged);
+            // 
             // paneldtgvTCuu
             // 
             this.paneldtgvTCuu.Controls.Add(this.dataGridViewTraCuu);
@@ -2487,47 +2529,6 @@
             // 
             this.printDialogInBCT.UseEXDialog = true;
             // 
-            // radioButtonTimChinhXac
-            // 
-            this.radioButtonTimChinhXac.AutoSize = true;
-            this.radioButtonTimChinhXac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.radioButtonTimChinhXac.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTimChinhXac.Location = new System.Drawing.Point(3, 29);
-            this.radioButtonTimChinhXac.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonTimChinhXac.Name = "radioButtonTimChinhXac";
-            this.radioButtonTimChinhXac.Size = new System.Drawing.Size(125, 23);
-            this.radioButtonTimChinhXac.TabIndex = 3;
-            this.radioButtonTimChinhXac.TabStop = true;
-            this.radioButtonTimChinhXac.Text = "Tìm chính xác";
-            this.radioButtonTimChinhXac.UseVisualStyleBackColor = false;
-            this.radioButtonTimChinhXac.CheckedChanged += new System.EventHandler(this.radioButtonTimChinhXac_CheckedChanged);
-            // 
-            // radioButtonTimTuongDoi
-            // 
-            this.radioButtonTimTuongDoi.AutoSize = true;
-            this.radioButtonTimTuongDoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.radioButtonTimTuongDoi.Checked = true;
-            this.radioButtonTimTuongDoi.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonTimTuongDoi.Location = new System.Drawing.Point(3, 2);
-            this.radioButtonTimTuongDoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.radioButtonTimTuongDoi.Name = "radioButtonTimTuongDoi";
-            this.radioButtonTimTuongDoi.Size = new System.Drawing.Size(127, 23);
-            this.radioButtonTimTuongDoi.TabIndex = 2;
-            this.radioButtonTimTuongDoi.TabStop = true;
-            this.radioButtonTimTuongDoi.Text = "Tìm tương đối";
-            this.radioButtonTimTuongDoi.UseVisualStyleBackColor = false;
-            this.radioButtonTimTuongDoi.CheckedChanged += new System.EventHandler(this.radioButtonTimTuongDoi_CheckedChanged);
-            // 
-            // flowLayoutPanel4
-            // 
-            this.flowLayoutPanel4.Controls.Add(this.radioButtonTimTuongDoi);
-            this.flowLayoutPanel4.Controls.Add(this.radioButtonTimChinhXac);
-            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 50);
-            this.flowLayoutPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
-            this.flowLayoutPanel4.Size = new System.Drawing.Size(191, 58);
-            this.flowLayoutPanel4.TabIndex = 4;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2549,7 +2550,7 @@
             this.tabPage3.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQDHH)).EndInit();
             this.pnCapNhatQuyDinh.ResumeLayout(false);
             this.panelQuyDinhHienHanh.ResumeLayout(false);
             this.panelQuyDinhHienHanh.PerformLayout();
@@ -2652,11 +2653,11 @@
             this.flowLayoutPanel5.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            this.flowLayoutPanel4.ResumeLayout(false);
+            this.flowLayoutPanel4.PerformLayout();
             this.paneldtgvTCuu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTraCuu)).EndInit();
             this.tCtrlChinh.ResumeLayout(false);
-            this.flowLayoutPanel4.ResumeLayout(false);
-            this.flowLayoutPanel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2776,7 +2777,7 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridViewQDHH;
         private System.Windows.Forms.Panel pnCapNhatQuyDinh;
         private System.Windows.Forms.Panel panelQuyDinhHienHanh;
         private System.Windows.Forms.Button buttonLamMoiQuyDinh;

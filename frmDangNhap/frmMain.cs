@@ -184,9 +184,9 @@ namespace frmDangNhap
             DatThoiDiemHienTai(txtBoxNgaySuaChua);
 
             //Lấy quy định hiện hành
-            dataGridViewQuyDinhHienHanh.DataSource = QuyDinhBUS.Instance.LayTatCaQuyDinh();
-            dataGridViewQuyDinhHienHanh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewQuyDinhHienHanh.AutoResizeColumns();
+            dataGridViewQDHH.DataSource = QuyDinhBUS.Instance.LayTatCaQuyDinh();
+            dataGridViewQDHH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewQDHH.AutoResizeColumns();
             GioiHanQuyenHan();
             DatMacDinhChoComboBox(comboBoxBienSoXe1);
             dateTimePickerChonThoiDiemBaoCaoTon.CustomFormat = "MM/yyyy";
@@ -628,6 +628,11 @@ namespace frmDangNhap
             textBoxTenVTPTMoi.Enabled = false;
             textBoxGiaVTPT.Enabled = false;
             buttonTaoMoiVTPT.Visible = false;
+        }
+
+        private void dataGridViewQDHH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

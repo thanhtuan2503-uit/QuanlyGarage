@@ -50,8 +50,6 @@ namespace frmDangNhap {
         
         private XEDataTable tableXE;
         
-        private global::System.Data.DataRelation relationFK__CT_BAOCAO__MaBCT__5070F446;
-        
         private global::System.Data.DataRelation relationFK__CTPHIEUSU__MaPhi__4CA06362;
         
         private global::System.Data.DataRelation relationFK__PHIEUSUACH__MaKH__52593CB8;
@@ -504,7 +502,6 @@ namespace frmDangNhap {
                     this.tableXE.InitVars();
                 }
             }
-            this.relationFK__CT_BAOCAO__MaBCT__5070F446 = this.Relations["FK__CT_BAOCAO__MaBCT__5070F446"];
             this.relationFK__CTPHIEUSU__MaPhi__4CA06362 = this.Relations["FK__CTPHIEUSU__MaPhi__4CA06362"];
             this.relationFK__PHIEUSUACH__MaKH__52593CB8 = this.Relations["FK__PHIEUSUACH__MaKH__52593CB8"];
             this.relationFK__PHIEUTHUTI__MaKH__534D60F1 = this.Relations["FK__PHIEUTHUTI__MaKH__534D60F1"];
@@ -551,10 +548,6 @@ namespace frmDangNhap {
             base.Tables.Add(this.tableTIENCONG);
             this.tableXE = new XEDataTable();
             base.Tables.Add(this.tableXE);
-            this.relationFK__CT_BAOCAO__MaBCT__5070F446 = new global::System.Data.DataRelation("FK__CT_BAOCAO__MaBCT__5070F446", new global::System.Data.DataColumn[] {
-                        this.tableBAOCAOTON.MaBCTColumn}, new global::System.Data.DataColumn[] {
-                        this.tableCT_BAOCAOTON.MaBCTColumn}, false);
-            this.Relations.Add(this.relationFK__CT_BAOCAO__MaBCT__5070F446);
             this.relationFK__CTPHIEUSU__MaPhi__4CA06362 = new global::System.Data.DataRelation("FK__CTPHIEUSU__MaPhi__4CA06362", new global::System.Data.DataColumn[] {
                         this.tablePHIEUSUACHUA.MaPhieuSuaChuaColumn}, new global::System.Data.DataColumn[] {
                         this.tableCTPHIEUSUACHUA.MaPhieuSuaChuaColumn}, false);
@@ -1168,17 +1161,14 @@ namespace frmDangNhap {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CT_BAOCAOTONRow AddCT_BAOCAOTONRow(BAOCAOTONRow parentBAOCAOTONRowByFK__CT_BAOCAO__MaBCT__5070F446, PHUTUNGRow parentPHUTUNGRowByFK__CT_BAOCAO__MaPhu__4F7CD00D, int TonDau, int PhatSinh, int TonCuoi) {
+            public CT_BAOCAOTONRow AddCT_BAOCAOTONRow(int MaBCT, PHUTUNGRow parentPHUTUNGRowByFK__CT_BAOCAO__MaPhu__4F7CD00D, int TonDau, int PhatSinh, int TonCuoi) {
                 CT_BAOCAOTONRow rowCT_BAOCAOTONRow = ((CT_BAOCAOTONRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        MaBCT,
                         null,
                         TonDau,
                         PhatSinh,
                         TonCuoi};
-                if ((parentBAOCAOTONRowByFK__CT_BAOCAO__MaBCT__5070F446 != null)) {
-                    columnValuesArray[0] = parentBAOCAOTONRowByFK__CT_BAOCAO__MaBCT__5070F446[0];
-                }
                 if ((parentPHUTUNGRowByFK__CT_BAOCAO__MaPhu__4F7CD00D != null)) {
                     columnValuesArray[1] = parentPHUTUNGRowByFK__CT_BAOCAO__MaPhu__4F7CD00D[0];
                 }
@@ -4759,17 +4749,6 @@ namespace frmDangNhap {
             public void SetThoiDiemBaoCaoNull() {
                 this[this.tableBAOCAOTON.ThoiDiemBaoCaoColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public CT_BAOCAOTONRow[] GetCT_BAOCAOTONRows() {
-                if ((this.Table.ChildRelations["FK__CT_BAOCAO__MaBCT__5070F446"] == null)) {
-                    return new CT_BAOCAOTONRow[0];
-                }
-                else {
-                    return ((CT_BAOCAOTONRow[])(base.GetChildRows(this.Table.ChildRelations["FK__CT_BAOCAO__MaBCT__5070F446"])));
-                }
-            }
         }
         
         /// <summary>
@@ -4853,17 +4832,6 @@ namespace frmDangNhap {
                 }
                 set {
                     this[this.tableCT_BAOCAOTON.TonCuoiColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public BAOCAOTONRow BAOCAOTONRow {
-                get {
-                    return ((BAOCAOTONRow)(this.GetParentRow(this.Table.ParentRelations["FK__CT_BAOCAO__MaBCT__5070F446"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__CT_BAOCAO__MaBCT__5070F446"]);
                 }
             }
             
@@ -12236,15 +12204,6 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._bAOCAOTONTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._bAOCAOTONTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._pHIEUSUACHUATableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.PHIEUSUACHUA.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12269,6 +12228,15 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tIENCONGTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._bAOCAOTONTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._bAOCAOTONTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12360,14 +12328,6 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._bAOCAOTONTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._bAOCAOTONTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._pHIEUSUACHUATableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.PHIEUSUACHUA.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12389,6 +12349,14 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tIENCONGTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._bAOCAOTONTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._bAOCAOTONTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12498,6 +12466,14 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._bAOCAOTONTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._bAOCAOTONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._tIENCONGTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.TIENCONG.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12519,14 +12495,6 @@ SELECT BienSo, MaHX, MaKH, NgayTiepNhan, TrangThai FROM XE WHERE (BienSo = @Bien
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._pHIEUSUACHUATableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._bAOCAOTONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.BAOCAOTON.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._bAOCAOTONTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
