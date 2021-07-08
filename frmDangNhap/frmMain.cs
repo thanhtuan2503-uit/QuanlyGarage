@@ -467,6 +467,7 @@ namespace frmDangNhap
             textBoxTenVTPTMoi_TextChanged = true;
         }
 
+
         private void buttonPhieuNhapVTPTMoi_Click(object sender, EventArgs e)
         {
             textBoxTenVTPTMoi.Clear();
