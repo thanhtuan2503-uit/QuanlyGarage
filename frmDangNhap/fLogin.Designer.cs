@@ -47,7 +47,7 @@
             // 
             this.btnLogin.Location = new System.Drawing.Point(203, 168);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(98, 36);
+            this.btnLogin.Size = new System.Drawing.Size(108, 36);
             this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -78,7 +78,7 @@
             this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(357, 169);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(99, 35);
+            this.btnExit.Size = new System.Drawing.Size(108, 35);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "Thoát";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -136,7 +136,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(543, 233);
             this.Controls.Add(this.panel1);
